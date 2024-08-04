@@ -48,21 +48,21 @@ public class PlayerActions : MonoBehaviour
 
     protected virtual void OnMove(InputAction.CallbackContext context)
     {
-        // 이동 액션의 기본 구현 (필요시 파생 클래스에서 재정의)
+        
     }
 
     protected virtual void OnDash(InputAction.CallbackContext context)
     {
-        // 대쉬 액션의 기본 구현 (필요시 파생 클래스에서 재정의)
+        
     }
 
     protected virtual void OnAttack(InputAction.CallbackContext context)
     {
-        // 공격 액션의 기본 구현 (필요시 파생 클래스에서 재정의)
+        
     }
 
     protected virtual void OnPowerAttack(InputAction.CallbackContext context)
     {
-        // 강력한 공격 액션의 기본 구현 (필요시 파생 클래스에서 재정의)
+       
     }
 }
