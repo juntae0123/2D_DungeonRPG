@@ -154,7 +154,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546120642189999415}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -207,11 +207,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e52d84e9bf5fe244eb1be8260b76a581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackDamage: 10
   maxHealth: 100
   moveSpeed: 2
   attackRange: 2
-  attackDamage: 10
-  attackDamage: 20
   powerAttackDamage: 50
   attackCooldown: 1.5
   powerAttackCooldown: 10
@@ -227,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df900ad9cda662e48bf93cc3b1de3614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackDamage: 10
   maxHealth: 100
   moveSpeed: 2
   attackRange: 2
-  attackDamage: 10

@@ -1,9 +1,10 @@
 using UnityEngine;
+using System;
 using System.Collections;
 
 public class EnemyBase : MonoBehaviour
 {
-    public int attackDamage = 10; // 이 필드를 자식 클래스에서 새로 정의하지 않습니다.
+    public int attackDamage = 10;
     public int maxHealth = 100;
     protected int currentHealth;
 
@@ -12,6 +13,9 @@ public class EnemyBase : MonoBehaviour
 
     protected Animator animator;
     protected Transform player;
+
+    // 몬스터가 죽을 때 호출되는 이벤트
+    public static event Action OnDeath;
 
     protected virtual void Start()
     {
@@ -64,9 +68,19 @@ public class EnemyBase : MonoBehaviour
         }
     }
 
+    // 이벤트 호출 메서드
+    protected void InvokeOnDeath()
+    {
+        OnDeath?.Invoke();
+    }
+
     protected virtual void Die()
     {
-        animator.SetTrigger("Die");
-        gameObject.SetActive(false);
+        Debug.Log("Enemy is dying.");
+
+        // OnDeath 이벤트 호출
+        InvokeOnDeath();
+
+        Destroy(gameObject);  // 오브젝트를 제거하여 더 이상 존재하지 않게 만듦
     }
 }

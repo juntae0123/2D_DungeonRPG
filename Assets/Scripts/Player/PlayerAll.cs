@@ -163,6 +163,24 @@ public class PlayerAll : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, 2.0f, LayerMask.GetMask("Enemy"));
         foreach (Collider2D enemy in hitEnemies)
         {
+            SemiBoss semiBoss = enemy.GetComponent<SemiBoss>();
+            if (semiBoss != null)
+            {
+                semiBoss.TakeDamage(attackDamage);
+                Debug.Log($"플레이어가 세미보스에게 {attackDamage} 데미지를 입혔습니다.");
+            }
+            BowSkeleton BowSkeleton = enemy.GetComponent<BowSkeleton>();
+            if (BowSkeleton != null)
+            {
+                BowSkeleton.TakeDamage(attackDamage);
+                Debug.Log($"플레이어가 보우에게 {attackDamage} 데미지를 입혔습니다.");
+            }
+            WarriorSkeleton WarriorSkeleton = enemy.GetComponent<WarriorSkeleton>();
+            if (WarriorSkeleton != null)
+            {
+                WarriorSkeleton.TakeDamage(attackDamage);
+                Debug.Log($"플레이어가 워리어에게 {attackDamage} 데미지를 입혔습니다.");
+            }
             Boss boss = enemy.GetComponent<Boss>();
             if (boss != null)
             {
@@ -179,6 +197,13 @@ public class PlayerAll : MonoBehaviour
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, 1.0f, LayerMask.GetMask("Enemy"));
         foreach (Collider2D enemy in hitEnemies)
         {
+            SemiBoss semiBoss = enemy.GetComponent<SemiBoss>();
+            if (semiBoss != null)
+            {
+                semiBoss.TakeDamage(powerAttackDamage);
+                Debug.Log($"플레이어가 세미보스에게 {powerAttackDamage} 데미지를 입혔습니다.");
+            }
+
             Boss boss = enemy.GetComponent<Boss>();
             if (boss != null)
             {
@@ -226,6 +251,6 @@ public class PlayerAll : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, 1.0f);
+        Gizmos.DrawWireSphere(transform.position, 2.0f); // 공격 범위를 그립니다.
     }
 }

@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1359251452321363114}
   - component: {fileID: 1133090828311906763}
   - component: {fileID: 3216870344640464555}
+  - component: {fileID: -4978023548875273290}
+  - component: {fileID: -3403723047582777855}
   m_Layer: 3
   m_Name: WarriorSkeleton
   m_TagString: Enemy
@@ -30,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 3748758124628199054}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.5638113, y: 1.5163622, z: 0.01721476}
+  m_LocalPosition: {x: -3.5638113, y: 1.5163622, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -141,8 +143,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.87837636, y: -0.71219695}
-  m_Size: {x: 1.559015, y: 2.8409703}
+  m_Offset: {x: -0.9195461, y: -0.36550426}
+  m_Size: {x: 1.983841, y: 3.3519192}
   m_Direction: 0
 --- !u!50 &1133090828311906763
 Rigidbody2D:
@@ -152,7 +154,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3748758124628199054}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -178,7 +180,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3748758124628199054}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 2.56
   m_Speed: 3.5
@@ -193,3 +195,36 @@ NavMeshAgent:
   m_BaseOffset: 1.92
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-4978023548875273290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3748758124628199054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df900ad9cda662e48bf93cc3b1de3614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 10
+  maxHealth: 100
+  moveSpeed: 2
+  attackRange: 2
+--- !u!114 &-3403723047582777855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3748758124628199054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad771885ae55f234cb025f0b39444695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 5
+  maxHealth: 100
+  moveSpeed: 2
+  attackRange: 2
+  attackCooldown: 7

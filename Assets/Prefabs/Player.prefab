@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4545416524658925880}
   - component: {fileID: 3426322602923397745}
   - component: {fileID: 2062015015496820575}
+  - component: {fileID: 599936638987817500}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 5240855691802274958}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.43166876, y: 0.20615168, z: 0.087349266}
+  m_LocalPosition: {x: -0.43166876, y: 0.20615168, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -183,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5219ac83660a9e84c829eff560490f78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 1000
   attackDamage: 30
   powerAttackDamage: 60
   powerAttackCooldown: 5
@@ -191,3 +192,15 @@ MonoBehaviour:
   dashSpeed: 15
   dashDuration: 0.1
   dashCooldown: 1
+--- !u!114 &599936638987817500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5240855691802274958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d5030007f667b40b0468c12c6769a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

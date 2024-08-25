@@ -5,7 +5,7 @@ public class Boss : EnemyBase
 {
     public int powerAttackDamage = 50;
 
-    public float attackCooldown = 5.0f;       // 일반 공격 쿨타임 5초
+    public float attackCooldown = .0f;       // 일반 공격 쿨타임 5초
     public float powerAttackCooldown = 20.0f; // 강공 쿨타임 20초
 
     private float lastAttackTime;
@@ -16,7 +16,7 @@ public class Boss : EnemyBase
     protected override void Start()
     {
         maxHealth = 1000;
-        moveSpeed = 1.0f;
+        moveSpeed = 0.5f;
         attackRange = 3.0f; // 공격 범위 설정
 
         lastAttackTime = -attackCooldown; // 게임 시작과 동시에 공격할 수 있도록 설정
@@ -58,9 +58,6 @@ public class Boss : EnemyBase
 
     private void AttemptAttack()
     {
-        // 디버그 로그 추가
-        Debug.Log($"Attempting Attack. Time: {Time.time}, Last Attack Time: {lastAttackTime}, Last Power Attack Time: {lastPowerAttackTime}");
-
         if (Time.time - lastPowerAttackTime >= powerAttackCooldown)
         {
             PowerAttack();

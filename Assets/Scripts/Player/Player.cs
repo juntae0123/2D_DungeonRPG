@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int maxHealth = 100;
+    public int maxHealth = 500;
     private int currentHealth;
 
     public int AttackDamage = 30;
@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     private Animator animator;
     private void Start()
     {
-        currentHealth = 100;
+        currentHealth = 500;
     }
    
     void Attack()

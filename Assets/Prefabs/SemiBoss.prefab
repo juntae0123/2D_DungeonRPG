@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 1232080901480004515}
   - component: {fileID: 3708400464253416950}
   - component: {fileID: 717075776225533278}
-  - component: {fileID: 383953679365513320}
+  - component: {fileID: 8294401654592785288}
+  - component: {fileID: 386604511816461887}
   m_Layer: 3
   m_Name: SemiBoss
   m_TagString: Enemy
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 4931840515405891485}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.492983, y: 1.6425357, z: 0.012431101}
+  m_LocalPosition: {x: -4.492983, y: 1.6425357, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -171,25 +172,38 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!195 &383953679365513320
-NavMeshAgent:
+--- !u!114 &8294401654592785288
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4931840515405891485}
   m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 6.25
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 12.5
-  m_BaseOffset: 6.25
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df900ad9cda662e48bf93cc3b1de3614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 10
+  maxHealth: 100
+  moveSpeed: 2
+  attackRange: 2
+--- !u!114 &386604511816461887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4931840515405891485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090526a0f44e55a40ab04bcd6555dfaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 10
+  maxHealth: 100
+  moveSpeed: 2
+  attackRange: 2
+  powerAttackDamage: 50
+  attackCooldown: 5
+  powerattackCooldown: 20
